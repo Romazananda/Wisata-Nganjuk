@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<h1 style="background-color:#ff0000;">#ff0000</h1>
+	<h1 style="background-color:#0000ff;">#0000ff</h1>
+	<h1 style="background-color:#ee82ee;">#ee82ee</h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1 style="background-color:rgb(255, 99, 71);">
+		rgb(255, 99, 71)</h1>
+		<h1 style="background-color:rgba(255, 99, 71, 0.5);">
+		rgba(255, 99, 71, 0.5)</h1>
+	</body>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+	<p style="background-color:blue;"> warna biru</p>
+	<p style="background-color:green;"> warna hijau</p>
+	<p style="background-color:yellow;"> warna kuning</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Position</title>
+<style>
+    .satu {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    }
+    .dua {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+    top: 20px;
+    left: 90px;
+    }
+    .tiga {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    }
+</style>
+</head>
+<body>
+<div class="satu"></div>
+<div class="dua"></div>
+<div class="tiga"></div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+    }
+    .satu {
+      background-color: red;
+    }
+    .dua {
+      background-color: green;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    .tiga {
+      background-color: blue;
+    }
+    .container {
+      width: 600px;
+      height: 600px;
+      position: relative;
+      border: 20px solid yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+  </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 800px;
+        height: 200px;
+        margin: 20px auto;
+        border: 2px solid salmon;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .satu {
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(193, 237, 252);
+      }
+
+      .dua {
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(153, 252, 153);
+      }
+
+      .tiga {
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(253, 185, 196);
+      }
+
+      .empat {
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(255, 255, 148);
+      }
+
+      .lima {
+        width: 200px;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(241, 157, 223);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="satu">1</div>
+      <div class="dua">2</div>
+      <div class="tiga">3</div>
+      <div class="empat">4</div>
+      <div class="lima">5</div>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+        grid-template-rows: 100px 200px 50px;
+        grid-template-areas:
+          'header header header'
+          'sidebar content content'
+          'footer footer footer';
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: rgb(193, 237, 252);
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: rgb(253, 185, 196);
+      }
+
+      .content {
+        grid-area: content;
+        background-color: rgb(153, 252, 153);
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: rgb(255, 255, 148);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item header">1</div>
+      <div class="item sidebar">2</div>
+      <div class="item content">3</div>
+      <div class="item footer">4</div>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Media Query</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* Desktop style */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .item {
+      background-color: #ddd;
+      border: 1px solid #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .item:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    /* Tablet style */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+      }
+    }
+
+    /* Mobile style */
+    @media (max-width: 576px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        grid-gap: 5px;
+      }
+
+      .item {
+        padding: 5px;
+        font-size: 14px;
+      }
+    }
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 4</div>
+		<div class="item">Item 5</div>
+		<div class="item">Item 6</div>
+	</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Media Query</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		/* Desktop style */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+
+    .item {
+      background-color: #ddd;
+      border: 1px solid #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .item:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    /* Tablet style */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+      }
+    }
+
+    /* Mobile style */
+    @media (max-width: 576px) {
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 1fr);
+        grid-gap: 5px;
+      }
+
+      .item {
+        padding: 5px;
+        font-size: 14px;
+      }
+    }
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item">Item 1</div>
+		<div class="item">Item 2</div>
+		<div class="item">Item 3</div>
+		<div class="item">Item 4</div>
+		<div class="item">Item 5</div>
+		<div class="item">Item 6</div>
+	</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Responsive Memakai Flexbox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 10px;
+    }
+
+    .item {
+      flex-basis: calc(25% - 10px);
+      background-color: #ddd;
+      border: 1px solid #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .item:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        justify-content: space-around;
+      }
+
+      .item {
+        flex-basis: calc(50% - 10px);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        flex-direction: column;
+        margin: 10px;
+      }
+
+      .item {
+        flex-basis: calc(100% - 10px);
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+</body>
+</html>
